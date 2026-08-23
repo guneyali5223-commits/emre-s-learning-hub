@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useLang } from "@/lib/lang";
 import { links, LANGS } from "@/content/site";
-import portrait from "@/assets/portrait-placeholder.jpg";
+import portraitAsset from "@/assets/emre.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -99,13 +99,10 @@ function Home() {
         </div>
         <figure className="rise relative">
           <img
-            src={portrait}
-            width={1024}
-            height={1280}
-            alt="Placeholder collage for Emre Güney's portrait"
-            className="aspect-[4/5] w-full object-cover"
+            src={portraitAsset.url}
+            alt="Emre Güney"
+            className="aspect-[4/5] w-full object-cover object-top grayscale-[0.15]"
           />
-          <figcaption className="mt-2 text-xs text-muted-foreground">{t.hero.caption}</figcaption>
         </figure>
       </section>
 
