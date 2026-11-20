@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useLang } from "@/lib/lang";
 import { links, LANGS } from "@/content/site";
-import portraitUrl from "@/assets/emre.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -66,7 +65,7 @@ function Home() {
       <Nav />
 
       {/* HERO */}
-      <section className="mx-auto grid max-w-5xl gap-12 px-6 pb-24 pt-16 md:grid-cols-[1.1fr_0.9fr] md:items-center md:pt-24">
+      <section className="mx-auto max-w-5xl px-6 pb-24 pt-16 md:pt-24">
         <div className="rise">
           <h1 className="font-display text-5xl font-bold leading-[0.95] sm:text-6xl">
             {t.hero.name}
@@ -97,13 +96,6 @@ function Home() {
             </a>
           </div>
         </div>
-        <figure className="rise relative">
-          <img
-            src={portraitUrl}
-            alt="Emre Güney"
-            className="aspect-[4/5] w-full object-cover object-top grayscale-[0.15]"
-          />
-        </figure>
       </section>
 
       {/* ABOUT */}
