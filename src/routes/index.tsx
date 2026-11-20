@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useLang } from "@/lib/lang";
 import { links, LANGS } from "@/content/site";
-import portraitAsset from "@/assets/emre.jpg.asset.json";
+import portraitUrl from "@/assets/emre.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -99,7 +99,7 @@ function Home() {
         </div>
         <figure className="rise relative">
           <img
-            src={portraitAsset.url}
+            src={portraitUrl}
             alt="Emre Güney"
             className="aspect-[4/5] w-full object-cover object-top grayscale-[0.15]"
           />

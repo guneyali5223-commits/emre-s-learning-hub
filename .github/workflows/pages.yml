@@ -1,0 +1,42 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+      - run: bun run build
+      - name: Prerender homepage into static HTML
+        run: |
+          bunx wrangler dev --config dist/server/wrangler.json --port 8787 &
+          for i in $(seq 1 30); do curl -sf -o /dev/null http://localhost:8787/ && break; sleep 1; done
+          curl -s http://localhost:8787/ -o dist/client/index.html
+          grep -q "Emre Güney" dist/client/index.html
+          echo "emreguneyteacher.com" > dist/client/CNAME
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/client
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

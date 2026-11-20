@@ -232,7 +232,7 @@ export const content: Record<Lang, Content> = {
 };
 
 export const links = {
-  instagram: "https://instagram.com/emreguneyteacher",
-  whatsapp: "https://wa.me/",
+  instagram: "https://instagram.com/bellelucht",
+  whatsapp: "https://wa.me/905434312397",
   email: "mailto:hello@emreguneyteacher.com",
 };
