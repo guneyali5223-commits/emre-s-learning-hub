@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useLang } from "@/lib/lang";
 import { links, LANGS } from "@/content/site";
+import portrait from "@/assets/emre-guney-portrait.webp.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -67,8 +68,8 @@ function Home() {
       <Nav />
 
       {/* HERO */}
-      <section className="mx-auto max-w-5xl px-6 pb-24 pt-16 md:pt-24">
-        <div className="rise">
+      <section className="mx-auto grid max-w-5xl items-center gap-10 px-6 pb-12 pt-10 md:grid-cols-[1.2fr_0.8fr] md:gap-12">
+        <div className="rise min-w-0">
           <h1 className="font-display text-5xl font-bold leading-[0.95] sm:text-6xl">
             {t.hero.name}
           </h1>
@@ -98,6 +99,17 @@ function Home() {
             </a>
           </div>
         </div>
+        <figure className="m-0 w-full max-w-sm justify-self-center md:justify-self-end">
+          <img
+            src={portrait.url}
+            alt="Emre Güney"
+            width={1075}
+            height={1344}
+            fetchPriority="high"
+            decoding="async"
+            className="aspect-[4/5] w-full rounded-sm object-cover"
+          />
+        </figure>
       </section>
 
       {/* ABOUT */}

@@ -10,3 +10,4 @@
 <!-- LOVABLE:END -->
 
 - Prerender only the explicitly listed public homepage with TanStack Start and deploy `.output/public` to GitHub Pages; static hosting must not depend on a Worker process or capture private routes.
+- Keep photo sources in CDN asset pointers and mirror the referenced portrait into the static artifact at its exact URL path before deploying; GitHub Pages cannot serve Lovable's asset proxy itself.
