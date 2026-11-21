@@ -12,6 +12,8 @@ export const Route = createFileRoute("/")({
           "Emre Güney teaches English (A1–B2) and Dutch (A1–B1) with conversation-first, real-world lessons. Learn the language. Use it in real life.",
       },
       { property: "og:title", content: "Emre Güney — English & Dutch Teacher" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       {
         property: "og:description",
         content: "Conversation-first English and Dutch lessons. Learn the language. Use it in real life.",

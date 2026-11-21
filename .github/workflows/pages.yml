@@ -21,16 +21,14 @@ jobs:
       - uses: oven-sh/setup-bun@v2
       - run: bun install --frozen-lockfile
       - run: bun run build
-      - name: Prerender homepage into static HTML
+      - name: Verify static homepage
         run: |
-          bunx wrangler dev --config dist/server/wrangler.json --port 8787 &
-          for i in $(seq 1 30); do curl -sf -o /dev/null http://localhost:8787/ && break; sleep 1; done
-          curl -s http://localhost:8787/ -o dist/client/index.html
-          grep -q "Emre Güney" dist/client/index.html
-          echo "emreguneyteacher.com" > dist/client/CNAME
+          test -s .output/public/index.html
+          grep -q "Emre Güney" .output/public/index.html
+          echo "emreguneyteacher.com" > .output/public/CNAME
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/client
+          path: .output/public
   deploy:
     needs: build
     runs-on: ubuntu-latest

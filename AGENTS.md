@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Prerender only the explicitly listed public homepage with TanStack Start and deploy `.output/public` to GitHub Pages; static hosting must not depend on a Worker process or capture private routes.
