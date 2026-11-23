@@ -3,6 +3,8 @@ import { useLang } from "@/lib/lang";
 import { links, LANGS } from "@/content/site";
 import portrait from "@/assets/emre-guney-portrait.webp.asset.json";
 
+const portraitUrl = `https://spark-discovery-grow.lovable.app${portrait.url}`;
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -10,14 +12,16 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Emre Güney teaches English (A1–B2) and Dutch (A1–B1) with conversation-first, real-world lessons. Learn the language. Use it in real life.",
+          "English (A1–B2) and Dutch (A1–B1) lessons with Emre Güney. Grammar, vocabulary and time to practise speaking, planned around your level and goals.",
       },
       { property: "og:title", content: "Emre Güney — English & Dutch Teacher" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: portraitUrl },
+      { name: "twitter:image", content: portraitUrl },
       {
         property: "og:description",
-        content: "Conversation-first English and Dutch lessons. Learn the language. Use it in real life.",
+        content: "English and Dutch lessons with Emre Güney. Work on grammar, build your vocabulary and practise using the language in conversation.",
       },
     ],
   }),
@@ -101,7 +105,7 @@ function Home() {
         </div>
         <figure className="m-0 w-full max-w-sm justify-self-center md:justify-self-end">
           <img
-            src={`https://spark-discovery-grow.lovable.app${portrait.url}`}
+            src={portraitUrl}
             alt="Emre Güney"
             width={1075}
             height={1344}
