@@ -101,7 +101,7 @@ function Home() {
         </div>
         <figure className="m-0 w-full max-w-sm justify-self-center md:justify-self-end">
           <img
-            src={portrait.url}
+            src={`https://spark-discovery-grow.lovable.app${portrait.url}`}
             alt="Emre Güney"
             width={1075}
             height={1344}
