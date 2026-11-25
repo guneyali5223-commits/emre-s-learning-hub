@@ -210,20 +210,20 @@ function Home() {
         <p className="mt-5 max-w-md text-muted-foreground">{t.contact.body}</p>
         <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3 font-display">
           <a
+            href={links.whatsapp}
+            target="_blank"
+            rel="noreferrer"
+            className="border-b border-accent pb-0.5 text-accent transition-colors hover:border-foreground hover:text-foreground"
+          >
+            {t.contact.whatsapp}
+          </a>
+          <a
             href={links.instagram}
             target="_blank"
             rel="noreferrer"
             className="border-b border-foreground/30 pb-0.5 transition-colors hover:border-accent hover:text-accent"
           >
             {t.contact.instagram}
-          </a>
-          <a
-            href={links.whatsapp}
-            target="_blank"
-            rel="noreferrer"
-            className="border-b border-foreground/30 pb-0.5 transition-colors hover:border-accent hover:text-accent"
-          >
-            {t.contact.whatsapp}
           </a>
           <a
             href={links.email}
