@@ -227,9 +227,12 @@ function Home() {
           </a>
           <a
             href={links.email}
+            target="_blank"
+            rel="noreferrer"
+            title="guneyali5223@gmail.com"
             className="border-b border-foreground/30 pb-0.5 transition-colors hover:border-accent hover:text-accent"
           >
-            {t.contact.email}
+            {t.contact.email} · guneyali5223@gmail.com
           </a>
         </div>
       </Section>
