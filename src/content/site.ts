@@ -116,7 +116,7 @@ export const content: Record<Lang, Content> = {
       body: "We work on grammar and vocabulary, then use them in conversation. Getting an exercise right matters, but so does being able to ask a question or tell someone about your day.",
       points: [
         "You don't need perfect sentences to join a conversation.",
-        "We use podcasts, emails, songs and everyday conversations.",
+        "We use podcasts, songs and everyday conversations.",
         "There's plenty of time for you to speak.",
         "You'll know what we're working on and why.",
         "When something goes wrong, we work through it together.",
@@ -200,7 +200,7 @@ export const content: Record<Lang, Content> = {
       body: "Dil bilgisi ve kelime çalışıyoruz, sonra bunları konuşurken kullanıyoruz. Alıştırmayı doğru yapmak önemli; birine soru sorabilmek, gününü anlatabilmek de öyle.",
       points: [
         "Konuşmak için kusursuz cümleler kurman gerekmiyor.",
-        "Podcast, e-posta, şarkı ve günlük konuşmalardan yararlanıyoruz.",
+        "Podcast, şarkı ve günlük konuşmalardan yararlanıyoruz.",
         "Derste senin konuşmana bolca zaman ayırıyoruz.",
         "Neyi, neden çalıştığımızı biliyorsun.",
         "Hata yaptığında birlikte üzerinde duruyoruz.",
