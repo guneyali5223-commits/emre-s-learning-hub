@@ -233,6 +233,6 @@ export const content: Record<Lang, Content> = {
 
 export const links = {
   instagram: "https://instagram.com/bellelucht",
-  whatsapp: "https://wa.me/905434312397",
+  whatsapp: "https://wa.me/905542091354",
   email: "mailto:guneyali5223@gmail.com",
 };
